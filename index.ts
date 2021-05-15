@@ -80,7 +80,6 @@ export function hkdfModR(ikm: Uint8Array, keyInfo = new Uint8Array()) {
   const input = concatBytes(ikm, Uint8Array.from([0x00]));
   const label = concatBytes(keyInfo, Uint8Array.from([0x00, 0x30]));
   while (SK === 0n) {
-    salt = sha256(salt);
     const okm = hkdf(input, salt, label, 48);
     SK = os2ip(okm) % blsR;
   }

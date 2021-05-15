@@ -76,7 +76,6 @@ function hkdfModR(ikm, keyInfo = new Uint8Array()) {
     const input = concatBytes(ikm, Uint8Array.from([0x00]));
     const label = concatBytes(keyInfo, Uint8Array.from([0x00, 0x30]));
     while (SK === 0n) {
-        salt = fast_sha256_1.hash(salt);
         const okm = fast_sha256_1.hkdf(input, salt, label, 48);
         SK = os2ip(okm) % blsR;
     }
