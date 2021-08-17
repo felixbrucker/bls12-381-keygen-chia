@@ -29,7 +29,7 @@
   "author": "Paul Miller (https://paulmillr.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felixbrucker/bls12-381-keygen-chia.git"
+    "url": "https://github.com/foxypool/bls12-381-keygen-chia.git"
   },
   "license": "MIT",
   "dependencies": {
